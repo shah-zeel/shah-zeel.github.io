@@ -2,7 +2,7 @@
   "name": "shah-zeel.github.io",
   "private": true,
   "version": "0.0.0",
-  "homepage": "http://shah-zeel.github.io/shah-zeel.github.io",
+  "homepage": "https://shah-zeel.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
