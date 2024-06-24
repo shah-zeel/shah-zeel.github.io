@@ -1,0 +1,111 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import SeenAt from "../components/SeenAt.astro";
+import Stats from "../components/Stats.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../lib/createSlug";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const last_posts = posts.slice(0, 3);
+---
+
+<BaseLayout sideBarActiveItemID="home">
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hey there 👋</div>
+    <div class="text-5xl font-bold">I'm Zeel Shah</div>
+    <div class="text-3xl py-3 font-bold">Software Engineer</div>
+    <!--
+    <div class="py-2">
+      <text class="text-lg">
+        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
+        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
+        it useful!
+      </text>
+    </div>
+    -->
+    <div class="mt-8">
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/shah-zeel/"
+        target="_blank"
+      >
+        Let's connect!</a
+      >
+      <a
+        class="btn"
+        href="/cv"
+      >
+        Take me to CV!</a
+      >
+      <button
+        class="btn btn-outline ml-5"
+        onclick="window.open('./assets/Resume_Zeel_Shah.pdf')"
+      >
+        Download Resume
+      </button>
+    </div>
+  </div>
+
+  <div class="mb-8">
+    <div class="text-3xl w-full font-bold mb-2">As seen at {"^^"}</div>
+    <SeenAt />
+  </div>
+
+  <div class="mb-8">
+    <div class="text-3xl w-full font-bold mb-2">Some Stasts {"+-"}</div>
+    <Stats />
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+  </div>
+
+  <HorizontalCard
+    title="WasteNot"
+    img="/project-1.png"
+    desc="an expiry date tracker"
+    url="https://devpost.com/software/wastenot-hpx648"
+    badge="Full-Stack"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Fundriser"
+    img="/project-2.png"
+    desc="web3 crowdfunding"
+    url="https://devpost.com/software/fundriser"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Book Master"
+    img="/project-3.png"
+    desc="a book recommendation system"
+    url="https://github.com/shah-zeel/book-master"
+    badge="Full-satck"
+  />
+
+  <!--
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+  -->
+</BaseLayout>

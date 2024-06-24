@@ -1,0 +1,354 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import SideBarFooter from "../components/SideBarFooter.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="flex my-5">
+    <a
+      href="https://github.com/shah-zeel"
+      target="_blank"
+      class=""
+      aria-label="Github"
+      title="Github"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: currentColor;transform: ;msFilter:;"
+        ><path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+        ></path>
+      </svg>
+    </a>
+    <a
+      href="https://x.com/zeelshah2708"
+      target="_blank"
+      class="mx-3"
+      aria-label="Twitter"
+      title="Twitter"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: currentColor;transform: ;msFilter:;"
+        ><path
+          d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+        ></path>
+      </svg>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/shah-zeel"
+      target="_blank"
+      class="mx-3"
+      aria-label="Linkedin"
+      title="Linkedin"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: currentColor;transform: ;msFilter:;"
+        ><circle cx="4.983" cy="5.009" r="2.188"></circle><path
+          d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"
+        ></path>
+      </svg>
+    </a>
+    <a
+      href="mailto:zshah6@asu.edu"
+      target="_blank"
+      class="mx-3"
+      aria-label="Mail"
+      title="Mail"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
+        ><path
+          d="m18.73 5.41-1.28 1L12 10.46 6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z"
+        ></path></svg
+      >
+    </a>
+  </div>
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Motivated by curiosity and driven by impact, I aspire to harness the power
+    of computer science to create innovative and meaningful solutions that
+    address pressing challenges and improve lives.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="BS in Computer Science + Minor in Statistics"
+      subtitle="Jan 2023 to May 2026 at Arizona State University, Tempe, AZ, USA"
+    />
+    <TimeLineElement
+      title="High School"
+      subtitle="2017 to 2021 at SGM Shiroiya English School, Navsari, GUJ, India"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Software Engineer Intern at Meta (Instagram)"
+      subtitle="From May 2024 to Present at Meta, Menlo Park, CA, USA"
+    >
+      Developed an internal experiment report generator using Python, Pandas,
+      and SQL, significantly reducing data gathering and table creation time for
+      engineers, and enhancing overall efficiency and accuracy. Enabled
+      one-click generation of copy-paste-ready report templates, streamlining
+      the process for creating launch proposals, improving workflow automation,
+      and reducing manual effort by engineers.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Software Engineer at The Luminosity Lab, Arizona State University"
+      subtitle="From September 2023 to May 2024 at Arizona State University, Tempe, AZ, USA"
+    >
+      Led a groundbreaking project in Cobol-to-Java conversion, employing
+      machine learning for enhanced accuracy and efficiency throughout the
+      project life cycle, from conceptualization to implementation. Collaborated
+      cross-functionally to devise innovative algorithms, improving the model’s
+      adaptability to diverse Cobol codebases, ensuring streamlined conversion
+      and boosting code reliability in the resulting Java output.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Research Assistant at XuLab, Carnegie Mellon University"
+      subtitle="From June 2023 to September 2023 at Carnegie Mellon University, (Remote)"
+    >
+      Researched video anomaly detection for a robot in an automated lab setting
+      with a small dataset and class imbalance problem by developing a practical
+      feature extraction method for liquid transfer video images using PyTorch.
+      Incorporated an external unlabeled dataset by generating pseudo-labels
+      optimized hyperparameters and feature extraction to enhance model
+      generalizability and outperform state-of-the-art methods by 19% average
+      Area Under Curve (AUC).
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Research Assistant at Active Perception Group, Arizona State University"
+      subtitle="From April 2023 to June 2023 at Arizona State University, Tempe, AZ, USA"
+    >
+      Researched cross-modality techniques for text-to-music generation by
+      implementing Variational auto-encoder (VAE) architecture and data
+      augmentation techniques to lyrical-midi corpora using PyTorch framework
+      and Fairseq toolkit. Achieved music generation when conditioned with text
+      by training an autoencoder skeleton initialized with frozen BERT and
+      SymphonyNet weights, and a learnable latent space, resulting in a range of
+      musical compositions with loss of 1.524.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Full Stack Development Assistant at ARGOS Vision, Arizona State University"
+      subtitle="From February 2023 to April 2023 at Arizona State University, Tempe, AZ, USA"
+    >
+      Developed a web application to display real-time surveillance camera
+      footage while detecting and plotting points for people and cars by
+      designing the frontend and backend architecture and integrating the ML
+      algorithm. Developed the backend using Django, integrated Postgres for
+      efficient database management, applied React.js and Tailwind CSS to create
+      a responsive frontend, and utilized developer tools like Postman and
+      Swagger for API testing.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2 m-5">
+    <li>
+      <a
+        href="https://portal.neuromatchacademy.org/certificate/f908d82b-1558-4c31-ab51-8bb5611c29ac"
+        target="_blank"
+      >
+        Deep Learning - Neurometach Academy</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.coursera.org/account/accomplishments/certificate/B6X4HWDVM626"
+        target="_blank"
+      >
+        DeepLearning.AI logo Supervised Machine Learning: Regression and
+        Classification - DeepLearning.AI</a
+      >
+    </li>
+    <li>
+      <a href="#" target="_blank"> AI Programming with Python - Udacity</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <div>
+    <h3 class="text-xl font-semibold">Programming Languages:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+        alt="Python"
+      />
+      <img
+        src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+        alt="C++"
+      />
+      <img
+        src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
+        alt="Java"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Web Development:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+        alt="HTML5"
+      />
+      <img
+        src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+        alt="CSS3"
+      />
+      <img
+        src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+        alt="JavaScript"
+      />
+      <img
+        src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white"
+        alt="jQuery"
+      />
+      <img
+        src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+        alt="Bootstrap"
+      />
+      <img
+        src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+        alt="TailwindCSS"
+      />
+      <img
+        src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+        alt="React"
+      />
+      <img
+        src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"
+        alt="Next JS"
+      />
+      <img
+        src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+        alt="Express.js"
+      />
+      <img
+        src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+        alt="Flask"
+      />
+      <img
+        src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"
+        alt="Django"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Data:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"
+        alt="Postgres"
+      />
+      <img
+        src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"
+        alt="MySQL"
+      />
+      <img
+        src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"
+        alt="MongoDB"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Machine Learning / Deep Learning:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white"
+        alt="PyTorch"
+      />
+      <img
+        src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"
+        alt="scikit-learn"
+      />
+      <img
+        src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"
+        alt="NumPy"
+      />
+      <img
+        src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"
+        alt="Pandas"
+      />
+      <img
+        src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white"
+        alt="Plotly"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Design:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"
+        alt="Figma"
+      />
+      <img
+        src="https://img.shields.io/badge/adobeillustrator-%23FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white"
+        alt="Adobe Illustrator"
+      />
+      <img
+        src="https://img.shields.io/badge/Adobe%20InDesign-49021F?style=for-the-badge&logo=adobeindesign&logoColor=white"
+        alt="Adobe InDesign"
+      />
+      <img
+        src="https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white"
+        alt="Adobe Photoshop"
+      />
+      <img
+        src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"
+        alt="Canva"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Others:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"
+        alt="Postman"
+      />
+      <img
+        src="https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white"
+        alt="Swagger"
+      />
+      <img
+        src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+        alt="Linux"
+      />
+    </div>
+  </div>
+</BaseLayout>
