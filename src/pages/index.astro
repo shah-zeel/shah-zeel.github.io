@@ -5,6 +5,7 @@ import SeenAt from "../components/SeenAt.astro";
 import Stats from "../components/Stats.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
+import TimeLineElement from "../components/cv/TimeLine.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -35,7 +36,8 @@ const last_posts = posts.slice(0, 3);
       >
         Let's connect!</a
       >
-      <a class="btn" href="/cv"> Take me to CV!</a><button
+      <!-- <a class="btn" href="/cv"> Take me to CV!</a> -->
+      <button
         class="btn btn-outline ml-5"
         onclick="window.open('https://drive.google.com/file/d/1iWKkcBXrgRnWL2yVaqtsoL1MQdQKC_I5/view')"
       >
@@ -44,44 +46,289 @@ const last_posts = posts.slice(0, 3);
     </div>
   </div>
 
-  <div class="mb-8">
-    <div class="text-3xl w-full font-bold mb-2">As seen at {"^^"}</div>
-    <SeenAt />
+  <!-- 
+    <div class="mb-8">
+      <div class="text-3xl w-full font-bold mb-2">As seen at {"^^"}</div>
+      <SeenAt />
+    </div>
+
+    <div class="mb-8">
+      <div class="text-3xl w-full font-bold mb-2">Some Stats {"+-"}</div>
+      <Stats />
+    </div>
+  -->
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
-  <div class="mb-8">
-    <div class="text-3xl w-full font-bold mb-2">Some Stasts {"+-"}</div>
-    <Stats />
+  <div class="mb-10 text-justify">
+    Motivated by curiosity and driven by impact, I aspire to harness the power
+    of computer science to create innovative and meaningful solutions that
+    address pressing challenges and improve lives.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="BS in Computer Science + Minor in Statistics"
+      subtitle="Jan 2023 to May 2026 at Arizona State University, Tempe, AZ, USA"
+    />
+    <TimeLineElement
+      title="High School"
+      subtitle="2017 to 2021 at SGM Shiroiya English School, Navsari, GUJ, India"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Software Engineer Intern at Meta (Instagram)"
+      subtitle="From May 2024 to Present at Meta, Menlo Park, CA, USA"
+    >
+      Developed an internal experiment report generator using Python, Pandas,
+      and SQL, significantly reducing data gathering and table creation time for
+      engineers, and enhancing overall efficiency and accuracy. Enabled
+      one-click generation of copy-paste-ready report templates, streamlining
+      the process for creating launch proposals, improving workflow automation,
+      and reducing manual effort by engineers.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Software Engineer at The Luminosity Lab, Arizona State University"
+      subtitle="From September 2023 to May 2024 at Arizona State University, Tempe, AZ, USA"
+    >
+      Led a groundbreaking project in Cobol-to-Java conversion, employing
+      machine learning for enhanced accuracy and efficiency throughout the
+      project life cycle, from conceptualization to implementation. Collaborated
+      cross-functionally to devise innovative algorithms, improving the model’s
+      adaptability to diverse Cobol codebases, ensuring streamlined conversion
+      and boosting code reliability in the resulting Java output.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Research Assistant at XuLab, Carnegie Mellon University"
+      subtitle="From June 2023 to September 2023 at Carnegie Mellon University, (Remote)"
+    >
+      Researched video anomaly detection for a robot in an automated lab setting
+      with a small dataset and class imbalance problem by developing a practical
+      feature extraction method for liquid transfer video images using PyTorch.
+      Incorporated an external unlabeled dataset by generating pseudo-labels
+      optimized hyperparameters and feature extraction to enhance model
+      generalizability and outperform state-of-the-art methods by 19% average
+      Area Under Curve (AUC).
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Research Assistant at Active Perception Group, Arizona State University"
+      subtitle="From April 2023 to June 2023 at Arizona State University, Tempe, AZ, USA"
+    >
+      Researched cross-modality techniques for text-to-music generation by
+      implementing Variational auto-encoder (VAE) architecture and data
+      augmentation techniques to lyrical-midi corpora using PyTorch framework
+      and Fairseq toolkit. Achieved music generation when conditioned with text
+      by training an autoencoder skeleton initialized with frozen BERT and
+      SymphonyNet weights, and a learnable latent space, resulting in a range of
+      musical compositions with loss of 1.524.
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Full Stack Development Assistant at ARGOS Vision, Arizona State University"
+      subtitle="From February 2023 to April 2023 at Arizona State University, Tempe, AZ, USA"
+    >
+      Developed a web application to display real-time surveillance camera
+      footage while detecting and plotting points for people and cars by
+      designing the frontend and backend architecture and integrating the ML
+      algorithm. Developed the backend using Django, integrated Postgres for
+      efficient database management, applied React.js and Tailwind CSS to create
+      a responsive frontend, and utilized developer tools like Postman and
+      Swagger for API testing.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2 m-5">
+    <li>
+      <a
+        href="https://portal.neuromatchacademy.org/certificate/f908d82b-1558-4c31-ab51-8bb5611c29ac"
+        target="_blank"
+      >
+        Deep Learning - Neurometach Academy</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://www.coursera.org/account/accomplishments/certificate/B6X4HWDVM626"
+        target="_blank"
+      >
+        DeepLearning.AI logo Supervised Machine Learning: Regression and
+        Classification - DeepLearning.AI</a
+      >
+    </li>
+    <li>
+      <a href="#" target="_blank"> AI Programming with Python - Udacity</a>
+    </li>
+  </ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
-  </div>
+    <h3 class="text-xl font-semibold">Programming Languages:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+        alt="Python"
+      />
+      <img
+        src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+        alt="C++"
+      />
+      <img
+        src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"
+        alt="Java"
+      />
+    </div>
 
-  <HorizontalCard
-    title="WasteNot"
-    img="/project-1.png"
-    desc="an expiry date tracker"
-    url="https://devpost.com/software/wastenot-hpx648"
-    badge="Full-Stack"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Fundriser"
-    img="/project-2.png"
-    desc="web3 crowdfunding"
-    url="https://devpost.com/software/fundriser"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Book Master"
-    img="/project-3.png"
-    desc="a book recommendation system"
-    url="https://github.com/shah-zeel/book-master"
-    badge="Full-satck"
-  />
+    <h3 class="text-xl font-semibold">Web Development:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
+        alt="HTML5"
+      />
+      <img
+        src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
+        alt="CSS3"
+      />
+      <img
+        src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+        alt="JavaScript"
+      />
+      <img
+        src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white"
+        alt="jQuery"
+      />
+      <img
+        src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+        alt="Bootstrap"
+      />
+      <img
+        src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+        alt="TailwindCSS"
+      />
+      <img
+        src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+        alt="React"
+      />
+      <img
+        src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"
+        alt="Next JS"
+      />
+      <img
+        src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+        alt="Express.js"
+      />
+      <img
+        src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"
+        alt="Flask"
+      />
+      <img
+        src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"
+        alt="Django"
+      />
+    </div>
 
-  <!--
+    <h3 class="text-xl font-semibold">Data:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"
+        alt="Postgres"
+      />
+      <img
+        src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"
+        alt="MySQL"
+      />
+      <img
+        src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"
+        alt="MongoDB"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Machine Learning / Deep Learning:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white"
+        alt="PyTorch"
+      />
+      <img
+        src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"
+        alt="scikit-learn"
+      />
+      <img
+        src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"
+        alt="NumPy"
+      />
+      <img
+        src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"
+        alt="Pandas"
+      />
+      <img
+        src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white"
+        alt="Plotly"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Design:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"
+        alt="Figma"
+      />
+      <img
+        src="https://img.shields.io/badge/adobeillustrator-%23FF9A00.svg?style=for-the-badge&logo=adobeillustrator&logoColor=white"
+        alt="Adobe Illustrator"
+      />
+      <img
+        src="https://img.shields.io/badge/Adobe%20InDesign-49021F?style=for-the-badge&logo=adobeindesign&logoColor=white"
+        alt="Adobe InDesign"
+      />
+      <img
+        src="https://img.shields.io/badge/adobephotoshop-%2331A8FF.svg?style=for-the-badge&logo=adobephotoshop&logoColor=white"
+        alt="Adobe Photoshop"
+      />
+      <img
+        src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"
+        alt="Canva"
+      />
+    </div>
+
+    <h3 class="text-xl font-semibold">Others:</h3>
+    <div class="flex flex-wrap gap-2 m-5">
+      <img
+        src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white"
+        alt="Postman"
+      />
+      <img
+        src="https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white"
+        alt="Swagger"
+      />
+      <img
+        src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+        alt="Linux"
+      />
+    </div>
+
+    <!--
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
   </div>
@@ -102,4 +349,33 @@ const last_posts = posts.slice(0, 3);
     ))
   }
   -->
+  </div>
+
+  <div class="mt-10 mb-5">
+    <div class="text-3xl w-full font-bold">My Latest Projects {"</>"}</div>
+  </div>
+  <div>
+      <HorizontalCard
+        title="WasteNot"
+        img="/project-1.png"
+        desc="an expiry date tracker"
+        url="https://devpost.com/software/wastenot-hpx648"
+        badge="Full-Stack"
+      />
+      <div class="divider my-0"></div>
+      <HorizontalCard
+        title="Fundriser"
+        img="/project-2.png"
+        desc="web3 crowdfunding"
+        url="https://devpost.com/software/fundriser"
+      />
+      <div class="divider my-0"></div>
+      <HorizontalCard
+        title="Book Master"
+        img="/project-3.png"
+        desc="a book recommendation system"
+        url="https://github.com/shah-zeel/book-master"
+        badge="Full-satck"
+      />
+  </div>
 </BaseLayout>
